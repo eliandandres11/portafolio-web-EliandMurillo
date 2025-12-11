@@ -1,0 +1,139 @@
+/* --- Variables --- */
+:root {
+    --clr-dark-bg: #1e1e1e;
+    --clr-card-bg: #2d2d2d;
+    --clr-text-light: #f0f0f0;
+    --clr-accent: #00bcd4;
+    --clr-error: #ff5722;
+    --clr-success: #4caf50;
+    --font-primary: 'Montserrat', sans-serif;
+}
+
+/* --- Base y Contenedor --- */
+body {
+    font-family: var(--font-primary);
+    background: var(--clr-dark-bg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.auth-card, .profile-card {
+    width: 380px;
+    background: var(--clr-card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: var(--clr-text-light);
+}
+
+.card-title {
+    text-align: center;
+    color: var(--clr-accent);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* --- Formulario --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: var(--clr-text-light);
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #3a3a3a;
+    color: var(--clr-text-light);
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: 2px solid var(--clr-accent);
+    background: #444;
+}
+
+/* --- Botones --- */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background: var(--clr-accent);
+    color: var(--clr-dark-bg);
+}
+.btn-primary:hover {
+    background: #00e0f0;
+}
+
+.btn-secondary {
+    background: #555;
+    color: var(--clr-text-light);
+}
+.btn-secondary:hover {
+    background: #666;
+}
+
+/* --- Mensajes de Error --- */
+.error-message {
+    color: var(--clr-error);
+    margin-top: 15px;
+    font-size: 0.9rem;
+    height: 20px; /* Previene CLS */
+}
+
+/* --- Perfil --- */
+.profile-card {
+    text-align: center;
+}
+.profile-content {
+    margin-top: 20px;
+    padding: 20px;
+    background: #3a3a3a;
+    border-radius: 8px;
+    text-align: left;
+}
+.profile-content p {
+    margin: 5px 0;
+    color: #bdbdbd;
+}
+#nombreUsuario {
+    color: var(--clr-accent);
+    font-weight: 700;
+}
+.status-badge {
+    display: inline-block;
+    background: var(--clr-success);
+    color: var(--clr-dark-bg);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}

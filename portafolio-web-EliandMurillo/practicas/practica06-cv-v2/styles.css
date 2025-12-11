@@ -1,0 +1,254 @@
+/* -- Variables para V2 -- */
+:root {
+    --clr-main-bg: #f4f7f6;
+    --clr-sidebar-bg: #1c2732; /* Gris oscuro / Azul petróleo */
+    --clr-sidebar-text: #e0e6eb;
+    --clr-accent: #00bcd4; /* Cian vibrante */
+    --clr-accent-dark: #0097a7;
+    --clr-content-bg: #ffffff;
+    --clr-content-text: #333333;
+    --clr-border-light: #eeeeee;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+/* Base Reset */
+* { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: var(--clr-content-text);
+    background-color: var(--clr-main-bg);
+}
+
+/* Contenedor Principal de Dos Columnas */
+#cv-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Limpia bordes */
+}
+
+/* Columna Lateral (Sidebar) */
+#sidebar {
+    width: 300px; /* Ancho fijo */
+    background: var(--clr-sidebar-bg);
+    color: var(--clr-sidebar-text);
+    padding: 30px 20px;
+    flex-shrink: 0;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--clr-accent);
+    margin-bottom: 10px;
+}
+#sidebar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+.tagline {
+    font-size: 0.9rem;
+    color: var(--clr-accent);
+    margin: 5px 0 0 0;
+}
+
+/* Secciones de Sidebar */
+#sidebar section {
+    margin-bottom: 30px;
+}
+#sidebar h3 {
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--clr-accent);
+    padding-left: 8px;
+}
+
+.contact-info a, .social-link {
+    color: var(--clr-sidebar-text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contact-info a:hover, .social-link:hover {
+    color: var(--clr-accent);
+}
+
+/* Certificaciones y Habilidades Clave */
+.cert-tags, .key-skills-list {
+    list-style: none;
+    padding: 0;
+}
+.cert-tags li, .key-skills-list li {
+    background-color: rgba(0, 188, 212, 0.1); /* Fondo transparente con acento */
+    color: var(--clr-accent);
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Barras de Idiomas Simples */
+.language-progress-bars .bar-fill {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin: 5px 0 15px 0;
+    overflow: hidden;
+}
+.language-progress-bars .bar-fill::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: var(--clr-accent);
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Columna Principal (Content) */
+#content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: var(--clr-content-bg);
+}
+
+.content-block {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--clr-border-light);
+}
+#content h2 {
+    color: var(--clr-accent-dark);
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Experiencia */
+.job-entry {
+    margin-bottom: 25px;
+    border-left: 4px solid var(--clr-accent);
+    padding-left: 15px;
+}
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.job-entry h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--clr-content-text);
+}
+.job-date {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+}
+.job-location {
+    display: block;
+    color: var(--clr-accent-dark);
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Educación */
+.education-entry {
+    margin-bottom: 15px;
+}
+.education-entry h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.edu-date {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Habilidades Técnicas Centrales (Radial Progress) - Solo layout aquí */
+.tech-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+.skill-item {
+    text-align: center;
+}
+.skill-item h4 {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+/* Estilos para el SVG Radial Progress (se implementará el círculo en JS) */
+.radial-progress {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient(var(--clr-accent) 0%, var(--clr-border-light) 0%);
+    box-shadow: inset 0 0 0 8px var(--clr-content-bg);
+}
+.progress-label {
+    position: absolute;
+    font-weight: 700;
+    color: var(--clr-accent-dark);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Media Query para Responsividad */
+@media (max-width: 900px) {
+    #cv-container {
+        flex-direction: column; /* Apilar columnas */
+        margin: 0;
+        border-radius: 0;
+    }
+    #sidebar {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+    .profile-header {
+        border-bottom: none;
+    }
+    #content {
+        padding: 30px 20px;
+    }
+    /* Centrar elementos en sidebar en vista móvil */
+    .contact-info, #certificaciones, #idiomas, #habilidades-clave {
+        text-align: left;
+    }
+    #sidebar h3 {
+        margin-left: 20px; /* Margen para simular indentación */
+    }
+    .cert-tags, .key-skills-list {
+        display: block;
+        padding-left: 20px;
+    }
+    .language-progress-bars {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

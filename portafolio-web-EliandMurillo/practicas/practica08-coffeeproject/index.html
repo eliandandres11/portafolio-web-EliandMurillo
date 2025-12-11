@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Coffee | Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header-v2">
+        <div class="logo">The **Artisan** Coffee</div>
+        <nav class="main-nav">
+            <a href="#about"><i class="fas fa-mug-hot"></i> Historia</a>
+            <a href="#menu"><i class="fas fa-list-alt"></i> Menú</a>
+            <a href="#location"><i class="fas fa-map-marker-alt"></i> Ubicación</a>
+            <a href="#reserve" class="btn-cta">Reservar</a>
+        </nav>
+    </header>
+
+    <section id="hero-v2">
+        <div class="hero-content">
+            <h1>Despierta tus Sentidos.</h1>
+            <p>Café de origen y procesos artesanales, en el corazón de la ciudad.</p>
+            <a href="#menu" class="btn-primary">Ver Menú Completo</a>
+        </div>
+        
+        <div class="info-tag open-hours">
+            <i class="far fa-clock"></i> Abierto: 6:00 AM - 5:00 PM
+        </div>
+        <div class="info-tag address-tag">
+            <i class="fas fa-thumbtack"></i> 15 Adr Street, 5815
+        </div>
+    </section>
+
+    <section id="about" class="content-section about-grid">
+        <div class="text-block">
+            <h2>Nuestra Historia</h2>
+            <span class="subtitle">La pasión por la semilla perfecta.</span>
+            <p>
+                The Artisan Coffee fue fundado en blabla por Mr. Smith, con la visión de ofrecer café de la más alta calidad, priorizando procesos sostenibles y un tueste perfecto. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+            <p>
+                Cada taza es una experiencia, cultivada con dedicación desde la semilla hasta el sorbo.
+            </p>
+            <a href="#" class="btn-secondary">Conoce al Fundador</a>
+        </div>
+        <div class="image-block">
+            <img src="https://images.unsplash.com/photo-1517242589000-802c6123ed85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fGNvZmZlZSUyMGRldGFpbHxlbnwwfHx8fDE2NzUwNzU5Njg&ixlib=rb-4.0.3&q=80&w=600" alt="Detalle de granos de café">
+        </div>
+    </section>
+
+    <section id="reserve" class="content-section">
+        <div class="form-container">
+            <h2><i class="fas fa-calendar-check"></i> Haz tu Reservación</h2>
+            <form class="reservation-form">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                <div class="input-group">
+                    <input type="date" id="fecha" name="fecha" required>
+                    <input type="number" id="personas" name="personas" min="1" max="20" placeholder="# Personas" required>
+                </div>
+                <button type="submit" class="btn-cta">Confirmar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 The Artisan Coffee. | Creado para Portafolio Web.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

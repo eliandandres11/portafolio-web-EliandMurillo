@@ -1,0 +1,290 @@
+/* -- Variables V3: Minimalista y limpio -- */
+:root {
+    --clr-bg-main: #fcfcfc;
+    --clr-text-title: #2c3e50; /* Azul oscuro */
+    --clr-text-main: #34495e;
+    --clr-accent: #3498db; /* Azul profesional */
+    --clr-accent-light: #ecf0f1; /* Gris claro */
+    --clr-border: #e0e0e0;
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Lora', serif;
+}
+
+/* Base y Reset */
+* { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-main);
+    line-height: 1.6;
+}
+
+/* Encabezado Superior (Top Bar) */
+#top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: var(--clr-content-bg);
+    border-bottom: 2px solid var(--clr-accent-light);
+    max-width: 1200px;
+    margin: auto;
+}
+.header-info h1 {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    color: var(--clr-text-title);
+    margin: 0;
+}
+.header-info h2 {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    color: var(--clr-accent);
+    margin: 0;
+    font-weight: 500;
+}
+.contact-links a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.contact-links a:hover {
+    color: var(--clr-text-title);
+}
+.contact-links i { margin-right: 5px; }
+
+/* Layout Principal: CSS Grid */
+.cv-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Columna lateral más estrecha */
+    max-width: 1200px;
+    margin: 20px auto 50px auto;
+    gap: 30px;
+    padding: 0 40px;
+}
+
+/* Columna Lateral (Sidebar V3) */
+.sidebar-v3 {
+    padding: 20px 0;
+}
+.profile-img-v3 {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.section-box {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--clr-border);
+}
+.section-box h3 {
+    font-family: var(--font-title);
+    color: var(--clr-accent);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.section-box p {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+}
+.muted {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+.cert-list-v3 {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95rem;
+}
+.cert-list-v3 li {
+    padding-left: 0;
+    margin-bottom: 5px;
+}
+.section-box i { margin-right: 8px; }
+
+/* Indicador de Nivel de Idioma (Sencillo) */
+.lang-skill-v3 {
+    height: 10px;
+    background: var(--clr-accent-light);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.lang-skill-v3::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--clr-text-title);
+}
+.lang-skill-v3::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: var(--clr-accent);
+    width: 0;
+    transition: width 1s ease-out;
+}
+
+/* Columna Principal (Content V3) */
+.content-v3 {
+    padding: 20px 0;
+}
+.content-v3 section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--clr-border);
+}
+.content-v3 h2 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--clr-text-title);
+    border-bottom: 3px solid var(--clr-accent);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.summary-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--clr-text-main);
+}
+
+/* Habilidades (Grid de Etiquetas) */
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.skill-category h3 {
+    font-family: var(--font-title);
+    color: var(--clr-accent);
+    margin-top: 0;
+    border-left: 4px solid var(--clr-accent-light);
+    padding-left: 10px;
+}
+.skill-tags-v3 {
+    list-style: none;
+    padding: 0;
+}
+.skill-tags-v3 li {
+    display: inline-block;
+    background: var(--clr-accent-light);
+    color: var(--clr-text-title);
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 4px 6px 4px 0;
+    font-size: 0.9rem;
+}
+
+/* Experiencia (Timeline) */
+.timeline-v3 {
+    margin-bottom: 25px;
+    border-left: 3px solid var(--clr-accent);
+    padding-left: 15px;
+}
+.timeline-v3 h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--clr-text-title);
+    margin: 0;
+}
+.job-meta {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.timeline-v3 ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+.timeline-v3 li {
+    margin-bottom: 5px;
+}
+
+/* Proyectos (Tarjetas Limpias) */
+.project-card-v3 {
+    padding: 15px;
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s;
+}
+.project-card-v3:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.project-card-v3 h3 {
+    font-family: var(--font-title);
+    color: var(--clr-accent);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.project-link-v3 {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--clr-text-title);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer-v3 {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    background-color: var(--clr-accent-light);
+}
+
+/* Media Query (Responsividad) */
+@media (max-width: 850px) {
+    #top-bar {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    .contact-links {
+        margin-top: 15px;
+    }
+    .contact-links a {
+        margin: 0 10px;
+    }
+    .cv-grid {
+        grid-template-columns: 1fr; /* Columna única en móvil */
+        padding: 0 20px;
+        gap: 20px;
+    }
+    .sidebar-v3 {
+        padding: 0;
+        text-align: center;
+    }
+    .section-box {
+        text-align: left;
+        padding-left: 20px;
+    }
+    .profile-img-v3 {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .lang-skill-v3 {
+        width: 80%;
+        margin: 15px auto;
+    }
+}

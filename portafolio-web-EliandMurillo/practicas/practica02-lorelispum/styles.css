@@ -1,0 +1,40 @@
+/* Práctica 02: Estilos Básicos y Tipografía */
+
+/* Estilos globales y reseteo básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    /* Incluir fuentes de respaldo por si 'Open Sans' no carga */
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
+    font-size: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-text-size-adjust: none;
+}
+
+/* Estilo para el contenedor principal */
+#Outer {
+    max-width: 1000px; /* Limita el ancho para centrar el contenido */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h4, h5 {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+
+/* Puedes añadir más estilos de layout aquí si tu objetivo fue maquetar las secciones */

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 10 | Acceso Seguro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="auth-card">
+            <h2 class="card-title">ACCESO AL SISTEMA</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" placeholder="ej. Eliand Murillo 777" required aria-label="Usuario">
+                </div>
+                <div class="input-group">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" placeholder="********" required aria-label="Contraseña">
+                </div>
+                <button type="submit" class="btn btn-primary">INGRESAR</button>
+                <div id="mensajeError" class="error-message"></div>
+            </form>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

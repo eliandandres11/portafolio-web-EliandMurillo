@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorador de Los Simpsons API</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>🟡 Explorador de Los Simpsons API</h1>
+
+  <div class="formulario">
+    <label for="tipo">Selecciona qué consultar:</label>
+    <select id="tipo">
+      <option value="characters">Personajes</option>
+      <option value="episodes">Episodios</option>
+      <option value="locations">Lugares</option>
+    </select>
+    <button id="obtener">Obtener datos</button>
+  </div>
+
+  <div id="resultado"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

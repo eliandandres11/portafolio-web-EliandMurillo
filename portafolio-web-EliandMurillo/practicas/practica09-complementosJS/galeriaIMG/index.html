@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Galería de Imágenes (Carrusel JS)</title>
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background: #f4f4f7;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.gallery-container {
+			background: #fff;
+			padding: 25px;
+			border-radius: 16px;
+			box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+			text-align: center;
+			width: 450px;
+		}
+
+		h2 {
+			color: #333;
+			margin-bottom: 20px;
+			font-weight: 500;
+		}
+
+		img {
+			width: 100%;
+			height: 280px;
+			object-fit: cover;
+			border-radius: 12px;
+			margin-bottom: 20px;
+			transition: opacity 0.4s ease; 
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		button {
+			padding: 12px 20px;
+			background: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			font-size: 1em;
+			font-weight: 600;
+			transition: background 0.3s, transform 0.1s;
+		}
+
+		button:hover {
+			background: #0056b3;
+		}
+
+		button:active {
+			transform: scale(0.98);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="gallery-container">
+		<h2>🖼️ Galería Interactiva (Picsum)</h2>
+		<img id="imagen" src="https://picsum.photos/id/1015/450/280" alt="Imagen de galería">
+
+		<div class="buttons">
+			<button id="anterior">⏪ Anterior</button>
+			<button id="siguiente">Siguiente ⏩</button>
+		</div>
+	</div>
+
+	<script>
+		// Lista de imágenes
+		const imagenes = [
+			"https://picsum.photos/id/1015/450/280",
+			"https://picsum.photos/id/1016/450/280",
+			"https://picsum.photos/id/1018/450/280",
+			"https://picsum.photos/id/1020/450/280",
+			"https://picsum.photos/id/1024/450/280"
+		];
+
+		let indice = 0; 
+		const img = document.getElementById("imagen");
+		const btnAnterior = document.getElementById("anterior");
+		const btnSiguiente = document.getElementById("siguiente");
+
+		function mostrarImagen(fade = true) {
+			if (fade) {
+				img.style.opacity = 0; 
+			}
+			
+			setTimeout(() => {
+				img.src = imagenes[indice];
+				img.style.opacity = 1; 
+			}, fade ? 300 : 0);
+		}
+
+		btnSiguiente.addEventListener("click", () => {
+			indice = (indice + 1) % imagenes.length; 
+			mostrarImagen();
+		});
+
+		btnAnterior.addEventListener("click", () => {
+			indice = (indice - 1 + imagenes.length) % imagenes.length;
+			mostrarImagen();
+		});
+		mostrarImagen(false); 
+	</script>
+</body>
+</html>

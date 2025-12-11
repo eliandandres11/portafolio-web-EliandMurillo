@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Eliand Murillo - Backend Engineer</title>
+    <meta name="description" content="Currículum y portafolio profesional de Eliand Andrés Murillo Ramos, enfocado en desarrollo de sistemas Backend escalables.">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header id="top-bar">
+        <div class="header-info">
+            <h1>Eliand Andrés Murillo Ramos</h1>
+            <h2>Backend Developer | Systems Engineering Student</h2>
+        </div>
+        <nav class="contact-links">
+            <a href="#proyectos"><i class="fas fa-code"></i> Proyectos</a>
+            <a href="#experiencia"><i class="fas fa-briefcase"></i> Experiencia</a>
+            <a href="mailto:eliand.murillo.dev@gmail.com"><i class="fas fa-envelope"></i> Contacto</a>
+        </nav>
+    </header>
+
+    <main class="cv-grid">
+        <aside class="sidebar-v3">
+            <img src="https://i.imgur.com/uR2N8mX.png" alt="Avatar de Eliand Murillo" class="profile-img-v3">
+            
+            <section class="section-box">
+                <h3><i class="fas fa-map-marker-alt"></i> Ubicación</h3>
+                <p>Zapopan, Jalisco, MX</p>
+
+                <h3><i class="fas fa-phone-alt"></i> Teléfono</h3>
+                <p>+52 311 555 1234</p>
+            </section>
+            
+            <section class="section-box">
+                <h3><i class="fas fa-graduation-cap"></i> Formación</h3>
+                <p>Ing. Sistemas Computacionales</p>
+                <span class="muted">TecNM Campus Zapopan (2022 - Act.)</span>
+                
+                <p>Técnico en Informática</p>
+                <span class="muted">Tecnológico de Monterrey (2019 – 2022)</span>
+            </section>
+            
+            <section class="section-box">
+                <h3><i class="fas fa-medal"></i> Certificaciones</h3>
+                <ul class="cert-list-v3">
+                    <li>Cisco: Redes y Seguridad</li>
+                    <li>Platzi: Node.js y Express</li>
+                    <li>LinkedIn: BD Relacionales</li>
+                </ul>
+            </section>
+
+            <section class="section-box">
+                <h3><i class="fas fa-language"></i> Idiomas</h3>
+                <div class="lang-skill-v3" data-label="Español" data-level="100"></div>
+                <div class="lang-skill-v3" data-label="Inglés" data-level="65"></div>
+            </section>
+        </aside>
+
+        <div class="content-v3">
+            <section id="perfil">
+                <h2>Perfil Profesional</h2>
+                <p class="summary-text">
+                    Estudiante de Ingeniería en Sistemas Computacionales enfocado en la arquitectura y desarrollo de soluciones **Backend robustas y escalables**. Especialista en Node.js, diseño de APIs RESTful y optimización de bases de datos relacionales (MySQL). Mi enfoque es entregar código de alta calidad, documentación detallada y aplicar metodologías ágiles para el éxito del equipo.
+                </p>
+            </section>
+
+            <section id="habilidades">
+                <h2>Habilidades Técnicas</h2>
+                <div class="skills-section">
+                    <div class="skill-category">
+                        <h3>Backend & APIs</h3>
+                        <ul class="skill-tags-v3">
+                            <li>Node.js (Express)</li>
+                            <li>APIs RESTful</li>
+                            <li>Auth: JWT</li>
+                            <li>Microservicios</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Bases de Datos</h3>
+                        <ul class="skill-tags-v3">
+                            <li>MySQL / SQL</li>
+                            <li>Diseño de Esquemas</li>
+                            <li>Optimización de Consultas</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas & Otros</h3>
+                        <ul class="skill-tags-v3">
+                            <li>Git & GitHub</li>
+                            <li>C/C++ (Académico)</li>
+                            <li>Scrum (Agile)</li>
+                            <li>Linux Básico</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiencia Profesional</h2>
+                <article class="timeline-v3">
+                    <h3>Desarrollador Backend Jr. (Proyecto EvoPlay)</h3>
+                    <span class="job-meta">Abril 2025 - Presente | Remoto</span>
+                    <ul>
+                        <li>Desarrollo integral de la API REST para el sistema de gestión de torneos, manejando tráfico concurrente.</li>
+                        <li>Implementación de la autenticación de usuarios y la capa de acceso a datos, mejorando la seguridad y rendimiento.</li>
+                        <li>Colaboración directa con el equipo frontend para definir los *endpoints* necesarios.</li>
+                    </ul>
+                </article>
+                <article class="timeline-v3">
+                    <h3>Técnico de Soporte Jr.</h3>
+                    <span class="job-meta">Enero 2024 - Marzo 2025 | Zapopan, Jalisco</span>
+                    <ul>
+                        <li>Soporte y diagnóstico de problemas de hardware y software en ambientes Windows/Linux.</li>
+                        <li>Mantenimiento preventivo de infraestructura de red.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="proyectos">
+                <h2>Proyectos Clave</h2>
+                <div class="project-card-v3">
+                    <h3>EvoPlay (API REST)</h3>
+                    <p>Backend para gestión de torneos y usuarios. Sistema modular con enfoque en rendimiento y escalabilidad.</p>
+                    <a href="https://github.com/eliandandres11/EvoPlay-API" target="_blank" class="project-link-v3">
+                        Ver Repositorio <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="project-card-v3">
+                    <h3>Simulador de Algoritmos (C++)</h3>
+                    <p>Herramienta académica para visualizar y analizar el comportamiento de algoritmos de ordenamiento.</p>
+                    <a href="#" class="project-link-v3">
+                        Detalles (Link interno) <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-v3">
+        <p>Documento desarrollado por Eliand Andrés Murillo Ramos. Referencias disponibles a petición.</p>
+    </footer>
+</body>
+</html>

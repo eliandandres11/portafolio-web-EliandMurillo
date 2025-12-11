@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Tareas Interactivas (To-Do)</title>
+	<style>
+		body {
+			font-family: 'Roboto', sans-serif;
+			background: #f0f4f9;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.todo-container {
+			background: #fff;
+			padding: 30px;
+			border-radius: 16px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			width: 450px;
+			max-width: 90%;
+		}
+
+		h2 {
+			text-align: center;
+			color: #007bff;
+			margin-bottom: 25px;
+			font-weight: 700;
+		}
+
+		.input-group {
+			display: flex;
+			margin-bottom: 25px;
+		}
+
+		input {
+			flex: 1;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 8px 0 0 8px;
+			font-size: 1em;
+			outline: none;
+		}
+
+		button#agregarBtn {
+			padding: 12px 20px;
+			background: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 0 8px 8px 0;
+			cursor: pointer;
+			transition: background 0.3s;
+		}
+
+		button#agregarBtn:hover {
+			background: #0056b3;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		li {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background: #f7f9fc;
+			margin-bottom: 10px;
+			padding: 12px 15px;
+			border-radius: 8px;
+			transition: all 0.3s;
+		}
+
+		li.completed {
+			text-decoration: line-through;
+			color: #777;
+			background: #d4edda;
+			border-left: 5px solid #28a745;
+		}
+
+		.acciones button {
+			margin-left: 8px;
+			padding: 6px 10px;
+			font-size: 0.9em;
+			border-radius: 6px;
+			border: none;
+			color: white;
+		}
+
+		.btn-completar { background: #28a745; }
+		.btn-completar:hover { background: #218838; }
+
+		.btn-eliminar { background: #dc3545; }
+		.btn-eliminar:hover { background: #c82333; }
+	</style>
+</head>
+<body>
+	<div class="todo-container">
+		<h2>✅ Gestión de Tareas (DOM)</h2>
+		<div class="input-group">
+			<input type="text" id="nuevaTarea" placeholder="Escribe una tarea y presiona Enter...">
+			<button id="agregarBtn">Agregar</button>
+		</div>
+		<ul id="listaTareas"></ul>
+	</div>
+
+	<script>
+		const input = document.getElementById("nuevaTarea");
+		const agregarBtn = document.getElementById("agregarBtn");
+		const listaTareas = document.getElementById("listaTareas");
+
+		function crearTareaElemento(texto) {
+			const li = document.createElement("li");
+			li.textContent = texto;
+
+			const acciones = document.createElement("div");
+			acciones.classList.add("acciones");
+
+			// Botón completar
+			const btnCompletar = document.createElement("button");
+			btnCompletar.textContent = "✔";
+			btnCompletar.classList.add("btn-completar");
+			btnCompletar.addEventListener("click", () => {
+				li.classList.toggle("completed");
+			});
+
+			// Botón eliminar
+			const btnEliminar = document.createElement("button");
+			btnEliminar.textContent = "🗑";
+			btnEliminar.classList.add("btn-eliminar");
+			btnEliminar.addEventListener("click", () => {
+				listaTareas.removeChild(li);
+			});
+
+			acciones.appendChild(btnCompletar);
+			acciones.appendChild(btnEliminar);
+			li.appendChild(acciones);
+
+			return li;
+		}
+
+		function agregarTarea() {
+			const texto = input.value.trim();
+			if (texto === "") return;
+
+			listaTareas.appendChild(crearTareaElemento(texto));
+			input.value = "";
+			input.focus();
+		}
+
+		// Inicialización de eventos
+		agregarBtn.addEventListener("click", agregarTarea);
+		input.addEventListener("keypress", function(e) {
+			if (e.key === "Enter") {
+				agregarTarea();
+			}
+		});
+	</script>
+</body>
+</html>

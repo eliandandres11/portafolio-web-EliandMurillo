@@ -1,0 +1,315 @@
+/* -- Variables y configuración general -- */
+:root {
+    /* Paleta más moderna y profesional */
+    --clr-bg-gradient: linear-gradient(135deg, #f0f4f9 0%, #e0e9f3 100%);
+    --clr-card-bg: #fff;
+    --clr-accent: #0077b6; /* Azul corporativo fuerte */
+    --clr-accent-light: #e6f2f9;
+    --clr-text-title: #1a202c;
+    --clr-text-main: #4a5568;
+    --clr-text-muted: #718096;
+    --clr-border: #edf2f7;
+    --clr-tag-bg: #f7fafc;
+    --font-main: 'Roboto', sans-serif;
+}
+
+/* -- Reset y fuentes -- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    background: var(--clr-bg-gradient);
+    color: var(--clr-text-main);
+}
+body { min-height: 100vh; }
+
+/* -- Layout principal -- */
+header, main, footer {
+    max-width: 1000px; /* Un poco más ancho */
+    margin: auto;
+}
+
+/* HEADER: Diseño con enfoque centrado en la información */
+header {
+    display: flex;
+    align-items: center;
+    padding: 40px 40px;
+    gap: 40px;
+    background: var(--clr-card-bg);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--clr-accent-light);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: var(--clr-text-title);
+    margin: 0 0 4px 0;
+    font-weight: 700;
+}
+
+header h2 {
+    color: var(--clr-accent);
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+address {
+    margin-top: 15px;
+    font-style: normal;
+    color: var(--clr-text-main);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+}
+
+address p { margin: 0; }
+
+address a {
+    color: var(--clr-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+address a:hover { color: var(--clr-text-title); }
+
+.icon-social {
+    width: 18px;
+    height: 18px;
+}
+
+/* MAIN: Uso de CSS Grid para un layout flexible */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Ocupa toda la fila */
+}
+
+main > section {
+    background: var(--clr-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    padding: 30px;
+}
+
+section h2 {
+    color: var(--clr-text-title);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--clr-accent); /* Nuevo estilo de énfasis */
+    padding-left: 15px;
+    font-weight: 700;
+}
+
+/* Perfil */
+#perfil p {
+    line-height: 1.6;
+    color: var(--clr-text-main);
+}
+
+/* Habilidades */
+.skills-list h4 {
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+.other-skills-title {
+    color: var(--clr-accent);
+    margin-top: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.other-skills, .cert-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.other-skills li, .cert-list li {
+    background: var(--clr-tag-bg);
+    color: var(--clr-text-title);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Experiencia Laboral */
+.timeline-item {
+    margin-bottom: 25px;
+    border-left: 3px solid var(--clr-accent-light);
+    padding-left: 15px;
+}
+.timeline-item h3 {
+    color: var(--clr-text-title);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.timeline-date {
+    display: block;
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+.timeline-item ul {
+    margin: 10px 0 0 15px;
+    color: var(--clr-text-main);
+    list-style: disc;
+    padding-left: 15px;
+}
+
+/* Educación */
+.course-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--clr-border);
+}
+.course-item h3 {
+    color: var(--clr-text-title);
+    margin: 0;
+    font-size: 1.1rem;
+}
+.course-item p {
+    margin: 4px 0;
+    color: var(--clr-text-main);
+    font-size: 1rem;
+}
+
+/* Proyectos */
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+.project-list li {
+    margin-bottom: 15px;
+}
+.project-list a {
+    color: var(--clr-accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+}
+.project-list a:hover {
+    text-decoration: underline;
+}
+.project-description {
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Barras de progreso */
+.progress-bar {
+    height: 12px;
+    background: var(--clr-border);
+    border-radius: 6px;
+    margin: 4px 0 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar-value {
+    height: 100%;
+    border-radius: 6px;
+    background: var(--clr-accent);
+    /* Transición más limpia y elegante */
+    transition: width 1.2s cubic-bezier(0.23, 1, 0.32, 1); 
+    box-shadow: 0 0 10px rgba(0, 119, 182, 0.5); /* Sombra sutil */
+}
+
+/* Gráficos de Idiomas */
+.language-charts {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.language-chart {
+    position: relative;
+    border-radius: 50%;
+    /* Estilo de anillo para progreso (implementado en JS/CSS, se puede mejorar con conics-gradient) */
+    background: var(--clr-tag-bg);
+    color: var(--clr-accent);
+    font-size: 1.4rem;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 700;
+    border: 4px solid var(--clr-accent-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+/* Se añade el nombre del idioma usando pseudo-elemento para limpieza */
+.language-chart::after {
+    content: attr(data-language);
+    position: absolute;
+    bottom: -25px;
+    font-size: 0.9rem;
+    color: var(--clr-text-muted);
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+}
+
+/* Media Query para responsividad (versión móvil) */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+    header h2 {
+        display: block;
+        margin: 10px auto 15px auto;
+        font-size: 1.1rem;
+    }
+    address {
+        justify-content: center;
+        gap: 10px 20px;
+    }
+    main {
+        grid-template-columns: 1fr; /* Una sola columna */
+        padding: 0 20px;
+        gap: 20px;
+    }
+    .full-width {
+        grid-column: auto;
+    }
+}

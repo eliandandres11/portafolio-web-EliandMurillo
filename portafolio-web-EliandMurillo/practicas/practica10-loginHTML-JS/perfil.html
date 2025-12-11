@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 10 | Perfil de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="profile-card">
+            <h2 class="card-title">BIENVENIDO, <span id="nombreUsuario"></span>!</h2>
+            <div class="profile-content">
+                <p>Tu sesión ha sido verificada exitosamente. Aquí puedes acceder a la información y herramientas personales.</p>
+                <div class="status-badge">🟢 Sesión Activa</div>
+                
+                <p class="data-point">Matrícula: 230120398</p>
+                <p class="data-point">Último Acceso: [Fecha y Hora Actual]</p>
+            </div>
+            <button onclick="cerrarSesion()" class="btn btn-secondary">CERRAR SESIÓN</button>
+        </div>
+    </div>
+    <script src="perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* -- Variables y Fuentes V2 -- */
+:root {
+    --clr-primary: #8B4513; /* Tono de marrón café */
+    --clr-secondary: #D2B48C; /* Beige/Arena claro */
+    --clr-text-dark: #333333;
+    --clr-bg-light: #F5F5F5;
+    --clr-white: #FFFFFF;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* Reset y Base */
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--clr-text-dark);
+    background-color: var(--clr-bg-light);
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--clr-primary);
+    line-height: 1.2;
+}
+.content-section {
+    padding: 60px 5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 1. Header y Navegación */
+#header-v2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--clr-white);
+    padding: 15px 5vw;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-text-dark);
+}
+.logo strong {
+    color: var(--clr-primary);
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--clr-text-dark);
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+.main-nav a:hover {
+    color: var(--clr-primary);
+}
+
+/* 2. Botones */
+.btn-cta, .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-cta, .btn-primary {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-primary);
+}
+.btn-primary:hover, .btn-cta:hover {
+    background-color: var(--clr-secondary);
+    color: var(--clr-text-dark);
+    border-color: var(--clr-secondary);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+}
+.btn-secondary:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+/* 3. Sección Hero */
+#hero-v2 {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fGNvZmZlZXxlbnwwfHx8fDE2NzUwNzU5Njg&ixlib=rb-4.0.3&q=80&w=1400') center center / cover no-repeat;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero-content {
+    color: var(--clr-white);
+}
+.hero-content h1 {
+    color: var(--clr-white);
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+.info-tag {
+    position: absolute;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.open-hours {
+    bottom: 20px;
+    left: 20px;
+}
+.address-tag {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* 4. Sección About (CSS Grid) */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* Texto más ancho que imagen */
+    gap: 50px;
+    align-items: center;
+    background-color: var(--clr-white);
+}
+.text-block h2 {
+    margin-top: 0;
+    font-size: 2.5rem;
+}
+.subtitle {
+    display: block;
+    color: var(--clr-secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.image-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 5. Formulario de Reservación */
+#reserve {
+    background-color: var(--clr-bg-light);
+    text-align: center;
+}
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--clr-white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.reservation-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+.input-group {
+    display: flex;
+    gap: 15px;
+}
+.input-group input {
+    flex: 1;
+}
+
+/* 6. Footer */
+footer {
+    background: var(--clr-text-dark);
+    color: var(--clr-white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+.social-icons a {
+    color: var(--clr-white);
+    margin: 0 10px;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+.social-icons a:hover {
+    color: var(--clr-secondary);
+}
+
+/* Medias Queries (Responsividad) */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Columna única */
+    }
+    .image-block {
+        order: -1; /* Mueve la imagen arriba en móvil */
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    #header-v2 {
+        flex-direction: column;
+    }
+    .main-nav {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .main-nav a {
+        margin-left: 0;
+    }
+    .input-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}
