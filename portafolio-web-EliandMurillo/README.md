@@ -3,7 +3,7 @@
 ## Información Personal
 * **Nombre Completo:** Eliand Andres Murillo Ramos
 * **Matrícula:** 230120470
-* **Grupo:** [Tu Grupo]
+* **Grupo:** Sexto
 * **Estudios:** Ingeniería en Sistemas Computacionales (TecNM)
 
 ## Breve Presentación
@@ -37,4 +37,5 @@ Estudiante de Ingeniería en Sistemas Computacionales, enfocado en el desarrollo
 
 | Tipo | Título del Proyecto | Enfoque Tecnológico | Enlace a Carpeta |
 | :--- | :--- | :--- | :--- |
+
 | **PROYECTO** | Título: Evo Play League | Desarrollo Full-Stack, APIs REST, PostgreSQL/MongoDB | EvoPlay
